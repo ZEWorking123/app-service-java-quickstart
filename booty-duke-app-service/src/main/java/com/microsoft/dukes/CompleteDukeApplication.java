@@ -20,7 +20,7 @@ public class CompleteDukeApplication extends Application {
 
         SeBootstrap.start(app, config).thenAccept(instance -> {
             instance.stopOnShutdown(stopResult -> stopResult.unwrap(Object.class));
-            System.out.printf("\nBooty Duke running at %s\n", instance.configuration().baseUri());
+            System.out.printf("\nBooty Duke at %s\n", instance.configuration().baseUri());
             System.out.println("Send SIGKILL to shutdown.");
         });
 
